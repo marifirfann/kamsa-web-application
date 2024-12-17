@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="!scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- <style>
+    * {
+        border: 1px solid red;
+    }
+</style> -->
+</head>
+
+<body class="font-Montserrat ">
+    <nav
+        class="h-[100px] bg-white bg-opacity-75 backdrop-blur-sm flex items-center justify-between px-4 md:px-[170px] sticky top-0 z-10">
+        <!-- Logo NEXUS -->
+        <a href="Landingpage.html" class="w-[80px] h-[80px] animate-popUpOut">
+            <img src="/img/kamsa/KAMSA KOGO 1.png" alt="KAMSA logo" />
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <div class="laptop:hidden desktop:hidden">
+            <button id="menu-button" class="text-silver-custom1 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navbar Links -->
+        <ul id="menu" class="hidden md:flex space-x-[30px] font-bold text-[16px] text-silver-custom1
+        phone:hidden tablet:hidden animate-popUpOut">
+            <li><a href="#program" class="text-silver-custom1 transition duration-300 ">Program</a></li>
+            <li><a href="#page2" class="text-silver-custom1 transition duration-300">About Us</a></li>
+            <li><a href="#more" class="text-silver-custom1 transition duration-300">More</a></li>
+        </ul>
+
+        <!-- Sign In & Sign Up -->
+        <ul class="flex items-center space-x-[24px] font-bold text-[15px] 
+        miniphone:hidden phone:hidden minitablet:hidden tablet:hidden desktop:flex laptop:flex">
+            <li
+                class="text-silver-custom1 hover:text-silver-custom1 transition duration-300 text-sm md:text-[16px] sm:text-[12px] animate-popUpOut">
+                <a href="SignIn.html">Sign in</a>
+            </li>
+            <li>
+                <div
+                    class="w-[184px] h-[47px] bg-silver-custom1 text-white flex items-center justify-center rounded-[54px] transition duration-300 hover:bg-slate-900 hover:scale-105 
+                    animate-popUpOut">
+                    <button class="text-sm font-medium md:text-white sm:text-[17px]"><a
+                            href="SignUp.html">SignUp</a></button>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="absolute top-[100px] left-0 w-full bg-white shadow-md hidden">
+            <ul class="flex flex-col space-y-4 p-4">
+                <li><a href="#" class="hover:text-silver-custom1 transition duration-300">Program</a></li>
+                <li><a href="#" class="hover:text-silver-custom1 transition duration-300">About Us</a></li>
+                <li><a href="#" class="hover:text-silver-custom1 transition duration-300">More</a></li>
+                <li class="text-silver-custom1 hover:text-blue-600 transition duration-300 text-sm"><a
+                        href="SignIn.html">
+                        Sign in</a></li>
+                <li>
+                    <div
+                        class="w-full bg-silver-custom1 text-white flex items-center justify-center rounded-[54px] transition duration-300 hover:bg-slate-900 hover:scale-105">
+                        <button class="w-full text-sm"><a href="SignUp.html">SignUp</a></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="navbar.js">
+    </script>
+
+    <!-- Hero -->
+    <div
+        class="relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')] before:bg-no-repeat before:bg-top before:bg-cover before:size-full before:-z-[1] before:transform before:-translate-x-1/2">
+        <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
+
+            <!-- End Announcement Banner -->
+
+            <!-- Title -->
+            <div class="mt-5 max-w-2xl text-center mx-auto animate-popUpOut">
+                <h1 class="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl">
+                    Kamsa Store
+                    <span
+                        class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Jombang</span>
+                </h1>
+            </div>
+            <!-- End Title -->
+
+            <div class="mt-5 max-w-3xl text-center mx-auto animate-popUpOut">
+                <p class="text-lg text-gray-600">Kamsa Store hadir sebagai solusi lengkap untuk kebutuhan ternak Anda.
+                    Kami menyediakan produk berkualitas mulai dari pakan hingga peralatan ternak, serta pelatihan untuk
+                    meningkatkan keterampilan pengelolaan ternak. Selain itu, kami membuka kesempatan magang bagi calon
+                    profesional untuk mendapatkan pengalaman langsung dan meningkatkan kompetensi di industri ternak.
+                    Dengan produk, layanan, dan kesempatan magang, Kamsa Store siap mendukung perjalanan ternak Anda
+                    menuju kesuksesan.</p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="mt-8 gap-3 flex justify-center animate-popUpOut">
+                <a class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:from-violet-600 focus:to-blue-600 py-3 px-4"
+                    href="./SignIn.html">
+                    Mulai Belanja
+                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </a>
+                <button type="button"
+                    class="relative group p-2 ps-3 inline-flex items-center gap-x-2 text-sm font-mono rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm 
+                    hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+                   <a href="#page2"> $ baca tentang kami
+                </a>
+                </button>
+            </div>
+            <!-- End Buttons -->
+
+            <div
+                class="mt-5 flex justify-center items-center gap-x-1 sm:gap-x-3 animate-popUpOut">
+                <span class="text-sm text-gray-600">Toko kebutuhan ternak:</span>
+                <span class="text-sm font-bold text-gray-900">kamsa</span>
+                <svg class="size-5 text-gray-300" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6 13L10 3" stroke="currentColor" stroke-linecap="round" />
+                </svg>
+                <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-mediumopacity-0 "
+                    href="#">
+                    Lokasi Toko
+                    <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero -->
+
+    <section>
+        <!-- GREETING TEXT -->
+        <div class="flex flex-col md:flex-row items-center justify-between mt-[40px] mx-[20px] md:mx-[80px] lg:mx-[182px] 
+        scroll-animate opacity-0 translate-y-4 transition-all duration-500">
+            <!-- Teks -->
+            <div class="">
+                <h1 class="text-silver-custom1 font-extrabold text-[32px] drop-shadow-xl ">
+                    Selamat Datang Di Kamsa Store
+                </h1>
+                <p class="text-silver-custom1 font-semibold text-[16px]">
+                    Kami menyediakan produk ternak yang berkualitas, dan juga beberapa pelatihan yang berguna untuk
+                    ternak kalian.
+                </p>
+            </div>
+
+            <!-- Ilustrasi Landing Page 1 -->
+            <div class="mt-[30px] md:mt-0 tablet:hidden phone:hidden">
+                <img src="/img/kamsa/ilustrasiLandingPage1.png" alt=""
+                    class="w-[300px] sm:w-[400px] md:w-[380px] h-auto" />
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="mb-[100px] md:mb-[150px] flex justify-center
+        scroll-animate opacity-0 translate-y-4 transition-all duration-500">
+            <button
+                class="w-[200px] sm:w-[250px] md:w-[287px] h-[50px] sm:h-[60px] md:h-[73px] 
+                bg-silver-custom1 rounded-[500px] font-bold text-[18px] sm:text-[20px] md:text-[24px] 
+                text-white drop-shadow-xl transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:shadow-slate-800 mt-[40px] md:mt-[60px]">
+                <a href="SignUp.html">Buat akun</a>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- FOOTER 1 -->
+    <footer id="program" class="bg-footer-baground py-[50px] overflow-hidden">
+        <div class="w-full mx-auto max-w-screen-xl text-center px-4 sm:px-6 lg:px-8">
+            <p class="font-medium text-[30px] text-silver-custom1 
+            scroll-animate opacity-0 translate-y-4 transition-all duration-500"
+            >Program Terbaru Kami</p>
+            <p class="mt-[12px] text-[16px] text-silver-custom1 scroll-animate opacity-0 translate-y-4 transition-all duration-500">
+                Bekerja sama dengan partner, kami menyelenggarakan beberapa program untuk mendukung Pelajar Indonesia.
+            </p>
+            <div class="relative flex justify-center mt-[30px] scroll-animate opacity-0 translate-y-4 transition-all duration-500">
+                <!-- Wrapper Kartu Program -->
+                <div id="carousel" class="w-full h-[312px] overflow-hidden relative">
+                    <!-- Kartu Program 1 -->
+                    <div
+                        class="carousel-item flex w-full phone:w-[634px] tablet:w-[634px] laptop:w-[634px] h-[312px] bg-white shadow-lg transition-transform duration-700">
+                        <img src="/img/kamsa/Rectangle 20-1.png" alt="Program Image"
+                            class="w-[250px] h-[250px] object-cover ml-[20px] mt-[30px]">
+                        <div class="flex flex-col justify-center px-[20px]">
+                            <p class="font-extralight text-silver-custom1">Pelatihan Pakan Ternak </p>
+                            <p class="font-bold text-silver-custom1 text-[24px]">Program Terbaru Kami</p>
+                            <p class="font-medium text-silver-custom1 mt-2">Pelatihan Pakan Ternak Fermentasi & Silase
+                                Pelajari cara membuat pakan ternak fermentasi dan silase untuk meningkatkan kualitas
+                                pakan dan efisiensi biaya.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Program 2 -->
+                    <div
+                        class="carousel-item flex w-full phone:w-[634px] tablet:w-[634px] laptop:w-[634px] h-[312px] bg-white shadow-lg transition-transform duration-700">
+                        <img src="/img/kamsa/Rectangle 20.png" alt="Program Image"
+                            class="w-[250px] h-[250px] object-cover ml-[20px] mt-[30px]">
+                        <div class="flex flex-col justify-center px-[20px]">
+                            <p class="font-extralight text-silver-custom1">Pelatihan Pembuatan Pupuk</p>
+                            <p class="font-bold text-silver-custom1 text-[24px]">Program Terbaru Kami </p>
+                            <p class="font-medium text-silver-custom1 mt-2">Pelatihan Pembuatan Pupuk Organik Pelatihan
+                                pembuatan pupuk organik dari pengolahan limbah ternak untuk meningkatkan kesuburan tanah
+                                dan ramah lingkungan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="flex justify-center mt-4 space-x-2">
+                <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer" data-index="0"></span>
+                <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer" data-index="1"></span>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Dot styles */
+        .dot {
+            background-color: #ccc;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot-active {
+            background-color: #6b7280;
+        }
+
+        /* Carousel container */
+        #carousel {
+            position: relative;
+            width: 634px;
+            height: 312px;
+            overflow: hidden;
+        }
+
+        /* Carousel item styles */
+        .carousel-item {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            opacity: 0;
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        /* Active item */
+        .carousel-item.active {
+            left: 0;
+            opacity: 1;
+        }
+
+        /* Next item */
+        .carousel-item.next {
+            left: 100%;
+            opacity: 0;
+        }
+
+        /* Previous item */
+        .carousel-item.prev {
+            left: -100%;
+            opacity: 0;
+        }
+    </style>
+
+    <!-- Menyertakan file JavaScript eksternal -->
+    <script src="/src/footeranim.js"></script>
+
+
+    <!-- PAGE2 -->
+    <section class="bg-white" id="page2">
+        <div class="container mx-auto  lg:px-16">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-10 pt-24 pb-16 scroll-animate opacity-0 translate-y-4 transition-all duration-500">
+                <img src="/img/kamsa/ilustrasiLandingPage2.png" alt="Nexus Illustration"
+                    class="w-full max-w-md lg:w-[600px] h-auto tablet:hidden" />
+                <div class="text-silver-custom1 mt-10 lg:mt-0 phone:mt-4 px-6 phone:px-6">
+                    <!-- Ubah phone:px-4 menjadi phone:px-6 -->
+                    <div>
+                        <p
+                            class="text-[32px] lg:text-[38px] font-extrabold text-center lg:text-left mt-16 tablet:mt-0 phone:text-[24px] phone:hidden
+                            scroll-animate opacity-0 translate-y-4 transition-all duration-500">
+                            <!-- Ubah phone:text-[20px] menjadi phone:text-[24px] -->
+                            Selamat Datang Di Kamsa Store !
+                        </p>
+                    </div>
+                    <div class="lg:hidden laptop:hidden tablet:hidden phone:w-[80px] phone:h-[80px] scroll-animate opacity-0 translate-y-4 transition-all duration-500">
+                        <img src="/img/kamsa/KAMSA KOGO 1.png" alt="">
+                    </div>
+                    <div>
+                        <p
+                            class="text-[18px] sm:text-center lg:text-[20px] font-normal mt-6 lg:mt-8 text-center lg:text-left phone:text-[14px] phone:hidden
+                            scroll-animate opacity-0 translate-y-4 transition-all duration-500">
+                            Kamsa Store adalah toko yang menyediakan produk ternak yang berkualitas dengan harga
+                            terjangkau, mulai dari pakan ternak hingga pupuk yang dihasilkan dari pengolahan limbah
+                            ternak. Selain itu, kami juga menyelenggarakan berbagai pelatihan, seperti pembuatan pakan
+                            ternak fermentasi, pakan ternak silase dan pengolahan limbah ternak seperti pembuatan pupuk
+                            cair dan pupuk padat, untuk meningkatkan keterampilan dan pengetahuan praktis para peserta.
+                        </p>
+                        <p class="phone:text-[14px] hidden laptop:hidden tablet:hidden">
+                            Kamsa Store adalah toko yang menyediakan produk ternak yang berkualitas dengan harga
+                            terjangkau
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- FOOTER 2 -->
+    <footer id="intership" class="bg-footer-baground py-[50px] ">
+        <div class="w-full mx-auto max-w-screen-xl text-center px-4 sm:px-6 lg:px-8">
+            <p class="font-bold text-[25px] text-silver-custom1 scroll-animate opacity-0 translate-y-4 transition-all duration-500">Intership Program</p>
+            <p class="mt-[12px] text-[18px] text-silver-custom1 scroll-animate opacity-0 translate-y-4 transition-all duration-500">
+                ikuti magang bersertifikat kami dan dapatkan pengalaman praktis dalam pembuatan pakan ternak, dan
+                pengolahan limbah ternak seperti pembuatan pupuk cair & padat. Pelajari keterampilan langsung di
+                lapangan dan peroleh sertifikat untuk meningkatkan kompetensi Anda.
+            </p>
+            <div class="flex flex-wrap justify-center mt-[50px] gap-10 scroll-animate opacity-0 translate-y-4 transition-all duration-500">
+                <img src="/img/kamsa/google-for-education-partner 1.png" alt="Academy Google ATP"
+                    class="h-auto max-h-[100px] object-contain">
+                <img src="/img/kamsa/google-for-education-partner 2.png" alt="Google Cloud Partner"
+                    class="h-auto max-h-[100px] object-contain phone:hidden">
+                <img src="/img/kamsa/google-for-education-partner 4.png" alt="Google for Education Partner"
+                    class="h-auto max-h-[100px] object-contain phone:hidden">
+                <img src="/img/kamsa/google-for-education-partner 5.png" alt="Google for Education Partner"
+                    class="h-auto max-h-[100px] object-contain phone:hidden tablet:hidden">
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- PAGE 3 -->
+    <section id="more" class="">
+        <div class="text-center text-silver-custom1 ">
+            <p class="mt-[150px] text-[30px] font-bold scroll-animate opacity-0 translate-y-4 transition-all duration-500">Kenapa Kamsa Store itu Berbeda?</p>
+            <p class="mt-[11px] text[18px] font-medium scroll-animate opacity-0 translate-y-4 transition-all duration-500
+            ">Kamsa Store menawarkan produk berkualitas dengan harga terjangkau dan pelatihan praktis dengan bimbingan
+                profesional. Belanja dan belajar, semua dalam satu tempat!.</p>
+        </div>
+        <!-- list path -->
+        <div class="flex justify-center mt-[88px] mb-[180px] ">
+
+            <ol
+                class=" relative border-s border-b-blue-black dark:border-gray-700 phone:px-[100px] phone:text-left tablet:text-center">
+                <li class="mb-10 ms-4 ">
+                    <div
+                        class="absolute w-3 h-3 bg-blueborder-b-blue-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700 phone:hidden tablet:hidden">
+                    </div>
+                    <time
+                        class="mb-1 text-sm font-normal leading-none text-blue-blac dark:text-silver-custom1     ">Produk
+                        Berkualitas & Terjangkau</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-silver-custom1">Produk Produk Di Kamsa
+                        Store
+                    </h3>
+                    <p class="mb-4 text-base font-normal text-silver-custom1     dark:text-blue-blac">Menyediakan
+                        berbagai produk mulai dari pakan ternak hingga perlengkapan ternak dengan harga yang bersaing.
+                    </p>
+                    <a href="#" class="inline-flex items-center px-4 py-2 text-sm font-medium text-silver-custom1    bg-white border border-b-blue-black rounded-lg hover:bg-gray-100
+                         hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-white
+                         dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+                        Lihat Produk <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg></a>
+                </li>
+                <li class="mb-10 ms-4">
+                    <div
+                        class="absolute w-3 h-3 bg-blueborder-b-blue-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700 phone:hidden tablet:hidden">
+                    </div>
+                    <time
+                        class="mb-1 text-sm font-normal leading-none text-blue-blac dark:text-silver-custom1  ">Pelatihan
+                        Praktis & Bersertifikat</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-silver-custom1">Pelatihan Bersertifikat
+                    </h3>
+                    <p class="text-base font-normal text-silver-custom1  dark:text-blue-blac">Menawarkan pelatihan
+                        keterampilan seperti pembuatan pakan ternak fermentasi, pupuk organik, dan pengolahan limbah
+                        yang berguna bagi pengembangan diri.</p>
+                </li>
+                <li class="ms-4">
+                    <div
+                        class="absolute w-3 h-3 bg-blueborder-b-blue-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700 phone:hidden tablet:hidden">
+                    </div>
+                    <time class="mb-1 text-sm font-normal leading-none text-blue-blac dark:text-silver-custom1  ">Fokus
+                        pada Pengembangan & Kepuasan Pelanggan</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-silver-custom1">Kepuasan Pelanggan
+                    </h3>
+                    <p class="text-base font-normal text-silver-custom1  dark:text-silver-custom1    ">Kamsa Store
+                        berkomitmen untuk memberikan pengalaman belanja yang memuaskan serta mendukung pelanggan dalam
+                        meningkatkan keterampilan mereka.</p>
+                </li>
+            </ol>
+
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER 2 -->
+    <footer class="bg-white rounded-lg shadow-xl m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="Landingpage.html" class="w-[80px] h-[80px] tablet:w-[40px] tablet:h-[40px] phone:hidden">
+                    <img src="/img/kamsa/KAMSA KOGO 1.png" alt="KAMSA logo" />
+                </a>
+
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-silver-custom1 sm:mb-0 ">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-silver-custom1 sm:text-center">© 2024 <a href=""
+                    class="hover:underline">Kamsa Store Application™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

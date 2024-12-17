@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-Montserrat">
+    <nav
+        class="h-[100px] bg-white bg-opacity-75 backdrop-blur-sm flex items-center justify-between px-4 md:px-[170px] sticky top-0 z-10">
+        <!-- Logo NEXUS -->
+        <a href="katalog.html" class="w-[80px] h-[80px]">
+            <img src="/img/kamsa/KAMSA KOGO 1.png" alt="KAMSA logo" />
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <div class="laptop:hidden desktop:hidden">
+            <button id="menu-button" class="text-silver-custom1 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+
+
+        <!-- Navbar Links -->
+        <ul id="menu"
+            class="hidden md:flex space-x-[30px] font-bold text-[16px] text-silver-custom1 phone:hidden tablet:hidden">
+            <li><a href="katalog.html"
+                    class="text-silver-custom1 transition duration-300 hover:text-blue-black   hover:rounded-sm">Katalog</a>
+            </li>
+            <li><a href="pelatihan.html"
+                    class="text-silver-custom1 transition duration-300 hover:text-blue-black   hover:rounded-sm">Pelatihan</a>
+            </li>
+            <li><a href="bantuan.html"
+                    class="text-silver-custom1 transition duration-300 hover:text-blue-black   hover:rounded-sm">Bantuan</a>
+            </li>
+
+        </ul>
+
+        <!-- Profile Dropdown (Sign In/Sign Up converted to Profile) -->
+        <ul
+            class="flex items-center space-x-[24px] font-bold text-[15px] miniphone:hidden phone:hidden minitablet:hidden tablet:hidden desktop:flex laptop:flex">
+            <!-- Profile Dropdown -->
+            <li class="relative">
+                <button id="profile-button"
+                    class="w-[40px] h-[40px] rounded-full text-white flex items-center justify-center overflow-hidden">
+                    <!-- Gambar Profil -->
+                    <img src="/img/icon/user.png" alt="Profile" class="w-full h-full object-cover" />
+                </button>
+                <div id="profile-dropdown"
+                    class="absolute hidden bg-white shadow-lg rounded-md right-0 top-10 w-[150px]">
+                    <ul class="space-y-2 p-2 text-silver-custom1">
+                        <li><a href="Account.html" class="block px-4 py-2 text-sm">Account</a></li>
+                        <li><a href="Logout.html" class="block px-4 py-2 text-sm">Log Out</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="absolute top-[100px] left-0 w-full bg-white shadow-md hidden">
+            <ul class="flex flex-col space-y-4 p-4">
+                <li><a href="katalog.html" class="hover:text-silver-custom1 transition duration-300">Katalog</a></li>
+                <li><a href="pelatihan.html" class="hover:text-silver-custom1 transition duration-300">Pelatihan</a>
+                </li>
+                <li><a href="bantuan.html" class="hover:text-silver-custom1 transition duration-300">Bantuan</a></li>
+                <li class="text-silver-custom1 hover:text-blue-600 transition duration-300 text-sm"><a
+                        href="SignIn.html">Sign in</a></li>
+                <li>
+                    <div
+                        class="w-full bg-silver-custom1 text-white flex items-center justify-center rounded-[54px] transition duration-300 hover:bg-slate-900 hover:scale-105">
+                        <button class="w-full text-sm"><a href="SignUp.html">SignUp</a></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        // Toggle the profile dropdown on click
+        document.getElementById('profile-button').addEventListener('click', function () {
+            var dropdown = document.getElementById('profile-dropdown');
+            dropdown.classList.toggle('hidden');
+        });
+    </script>
+    <script src="/src/navbar.js">
+    </script>
+
+    <!-- konten -->
+    <!-- FAQ -->
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <!-- Title -->
+        <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+            <h2 class="text-2xl font-bold md:text-4xl md:leading-tight">Bagaimana cara membeli lewat website?</h2>
+            <p class="mt-1 text-gray-600">Disini kalian akan menemukan semua</p>
+        </div>
+        <!-- End Title -->
+
+        <div class="max-w-2xl mx-auto">
+            <!-- Accordion -->
+            <div class="space-y-4">
+                <!-- Accordion 1 -->
+                <div class="border-b transition-all duration-300">
+                    <button
+                        class="w-full text-left text-gray-800 font-semibold py-3 px-4 bg-transparent rounded-lg focus:outline-none hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-0"
+                        onclick="toggleAccordion('faq1')">
+                        Can I cancel at anytime?
+                        <svg class="w-5 h-5 float-right transition-transform duration-300 transform" id="faq1-arrow"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div id="faq1" class="text-gray-800 px-4 pb-3 hidden">
+                        Yes, you can cancel anytime. No questions asked, though we'd appreciate some feedback.
+                    </div>
+                </div>
+                <!-- Accordion 2 -->
+                <div class="border-b transition-all duration-300">
+                    <button
+                        class="w-full text-left text-gray-800 font-semibold py-3 px-4 bg-transparent rounded-lg focus:outline-none hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-0"
+                        onclick="toggleAccordion('faq2')">
+                        My team has credits. How do we use them?
+                        <svg class="w-5 h-5 float-right transition-transform duration-300 transform" id="faq2-arrow"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div id="faq2" class="text-gray-800 px-4 pb-3 hidden">
+                        Once your team signs up for a subscription plan, we’ll work out the details over coffee.
+                    </div>
+                </div>
+                <!-- Accordion 3 -->
+                <div class="border-b transition-all duration-300">
+                    <button
+                        class="w-full text-left text-gray-800 font-semibold py-3 px-4 bg-transparent rounded-lg focus:outline-none hover:bg-gray-0 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-0"
+                        onclick="toggleAccordion('faq3')">
+                        How does Preline's pricing work?
+                        <svg class="w-5 h-5 float-right transition-transform duration-300 transform" id="faq3-arrow"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div id="faq3" class="text-gray-800 px-4 pb-3 hidden">
+                        Our pricing is tiered, and the details depend on your specific needs.
+                    </div>
+                </div>
+            </div>
+            <!-- End Accordion -->
+        </div>
+    </div>
+
+    <!-- End FAQ -->
+
+    <script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const arrow = document.getElementById(id + '-arrow');
+            const button = content.previousElementSibling; // Get the button element for the clicked accordion
+
+            // Toggle visibility of the content
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                arrow.setAttribute('d', 'm18 15-6-6-6 6'); // Change the arrow direction
+            } else {
+                content.classList.add('hidden');
+                arrow.setAttribute('d', 'm6 9 6 6 6-6'); // Revert the arrow direction
+            }
+        }
+    </script>
+
+    <!--  question-->
+
+    <!-- Comment Form -->
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="mx-auto max-w-2xl">
+            <div class="text-center">
+                <h2 class="text-xl text-gray-800 font-bold sm:text-3xl">
+                    Jika ada pertanyaan lain
+                </h2>
+            </div>
+
+            <!-- Card -->
+            <div class="mt-5 p-4 relative z-10 bg-white border rounded-xl sm:mt-10 md:p-10">
+                <form>
+                    <div class="mb-4 sm:mb-8">
+                        <label for="hs-feedback-post-comment-name-1" class="block mb-2 text-sm font-medium">Nama</label>
+                        <input type="text" id="hs-feedback-post-comment-name-1"
+                            class="py-3 px-4 block w-full border border-solid border-[#A0A0A0] rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                            placeholder="Full name">
+                    </div>
+
+                    <div class="mb-4 sm:mb-8">
+                        <label for="hs-feedback-post-comment-email-1" class="block mb-2 text-sm font-medium">Alamat
+                            Email</label>
+                        <input type="email" id="hs-feedback-post-comment-email-1"
+                            class="py-3 px-4 block w-full border border-solid border-[#A0A0A0] rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                            placeholder="Alamat Email">
+                    </div>
+
+                    <div>
+                        <label for="hs-feedback-post-comment-textarea-1"
+                            class="block mb-2 text-sm font-medium">Pertanyaan</label>
+                        <div class="mt-1">
+                            <textarea id="hs-feedback-post-comment-textarea-1"
+                                name="hs-feedback-post-comment-textarea-1" rows="3"
+                                class="py-3 px-4 block w-full border border-solid border-[#A0A0A0] rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                                placeholder="Tinggalkan pertanyaanmu disini..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 grid">
+                        <button type="submit"
+                            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Submit</button>
+                    </div>
+                </form>
+
+            </div>
+            <!-- End Card -->
+        </div>
+    </div>
+    <!-- End Comment Form -->
+    <!-- FOOTER 2 -->
+
+    <footer class="bg-white rounded-lg shadow-xl m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="Landingpage.html" class="w-[80px] h-[80px] tablet:w-[40px] tablet:h-[40px] phone:hidden">
+                    <img src="/img/kamsa/KAMSA KOGO 1.png" alt="KAMSA logo" />
+                </a>
+
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-silver-custom1 sm:mb-0 ">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-silver-custom1 sm:text-center">© 2024 <a href=""
+                    class="hover:underline">Kamsa Store Application™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
